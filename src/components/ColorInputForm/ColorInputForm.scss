@@ -1,0 +1,30 @@
+.color-input {
+    padding: 50px;
+    
+    &__button {
+        height: 30px;
+        min-width: 150px;
+        margin-left: 70px;
+        background-color: rgb(59, 137, 209);
+        color: white;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+
+        &-wrapper {
+            padding-top: 17px;
+        }
+
+        &:hover {
+            background-color:rgb(28, 119, 204);
+        }
+    }
+
+    &__form {
+        display: flex;
+        height: 100px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
