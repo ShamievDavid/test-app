@@ -1,10 +1,10 @@
 import React from 'react';
-import { ColorInput } from './components/ColorInputForm/';
+import { Colors } from './components/Colors';
 
 function App() {
   return (
     <div >
-      <ColorInput />
+      <Colors />
     </div>
   );
 };
