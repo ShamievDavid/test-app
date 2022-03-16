@@ -24,6 +24,7 @@ export const Input: FC<InputProps> = ({
   error,
   nameInput,
   onChange,
+  value,
   args
 }) => (
   <div className='input'>
@@ -35,7 +36,7 @@ export const Input: FC<InputProps> = ({
         {label}
       </label>
     )}
-    <input type='text' className='input__input' name={nameInput} onChange={onChange} {...args}/>
+    <input type='text' className='input__input' name={nameInput} value={value} onChange={onChange} {...args}/>
     {error && <div className='input__error'>{error}</div>}
   </div>
 );

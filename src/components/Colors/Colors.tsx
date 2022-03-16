@@ -11,12 +11,12 @@ interface ColorItem {
 
 export const Colors: FC = () => {
 
-  const [colors, setColors] = useState([]);
+  const [hexColors, setHexColors] = useState([]);
 
   return (
     <div>
-        <InputForm setColors={setColors} colors={colors}/>
-        <Filter colors={colors} />
+        <InputForm setHexColors={setHexColors} hexColors={hexColors}/>
+        <Filter hexColors={hexColors} />
     </div>
   )
 }

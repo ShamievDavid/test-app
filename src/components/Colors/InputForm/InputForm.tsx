@@ -11,8 +11,8 @@ interface ColorInputState {
 
 interface InputFormProps {
   //@todo: specify any
-  setColors: Dispatch<SetStateAction<any>>,
-  colors: Array<any>
+  setHexColors: Dispatch<SetStateAction<any>>,
+  hexColors: Array<string>
 }
 
 export class InputForm extends Component<InputFormProps, ColorInputState> {
@@ -25,12 +25,12 @@ export class InputForm extends Component<InputFormProps, ColorInputState> {
   handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     const color = this.state.color.toUpperCase();
-    const colors = this.props.colors;
+    const hexColors = this.props.hexColors;
     const error = validation.hex(color);
     this.setState({ ...this.state, error });
     if (!error) {
-      storage.addInArray('colors', color);
-      this.props.setColors([...colors, color]);
+      storage.addInArray('hexColors', color);
+      this.props.setHexColors([...hexColors, color]);
     }
   };
 

@@ -1,0 +1,19 @@
+.filter {
+    padding: 0 50px;
+
+    &__list {
+      display: flex;
+      &-storage {
+        padding-left: 40px
+      }
+      &-filter {
+        padding-left: 40px
+      }
+    }
+
+    &__input {
+      max-width: 600px;
+      display: flex;
+      justify-content: space-between;
+    }
+}
